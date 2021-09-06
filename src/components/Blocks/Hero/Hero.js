@@ -14,7 +14,7 @@ const Hero = () => {
             <div className='hero-btns'></div>
           </Col>
           <Col md={6} lg={6} className='hero-image'>
-            <Image src={Logo} />
+            <Image src={Logo} className='img-fluid' />
           </Col>
         </Row>
       </Container>
