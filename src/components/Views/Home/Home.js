@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Container } from 'react-bootstrap';
+import Hero from '../../Blocks/Hero/Hero';
 
 const Home = () => (
   <React.Fragment>
@@ -10,7 +11,7 @@ const Home = () => (
       <link rel='canonical' href='https://thetravisdavis.com' />
     </Helmet>
     <Container>
-      <h1>Welcome!</h1>
+      <Hero />
     </Container>
   </React.Fragment>
 );

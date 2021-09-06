@@ -1,0 +1,20 @@
+.navbar-custom {
+  padding: 1rem 20rem;
+  .navbar-brand {
+    padding: 0 2rem 0 5rem;
+    font-family: $main-font;
+  }
+  .nav-item {
+    .nav-link {
+      font-family: $main-font;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 1.7rem;
+      color: $fourth;
+      transition: 0.4s ease;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

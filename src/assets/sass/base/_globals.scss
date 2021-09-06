@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Work+Sans:wght@300&display=swap');
 
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Work Sans', sans-serif;
   letter-spacing: 0px;
@@ -32,11 +38,92 @@ h2 {
 }
 
 p {
-  margin: 1rem auto;
   text-transform: none;
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
   font-family: 'Poppins', sans-serif;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.container {
+  max-width: 1200px;
+}
+
+// Button Styles
+
+.btn-danger {
+  background-color: #ba0a0f !important;
+}
+
+button:focus,
+button:active,
+button:hover,
+.btn.active,
+.btn.active {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.button {
+  padding: 0.8rem 2.2rem;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 4px;
+}
+
+.button {
+  &.primary-button {
+    background: $gradient;
+    background-clip: padding-box;
+    color: $third;
+    box-shadow: $box-shadow;
+    &:hover {
+      background: $third;
+      background-clip: padding-box;
+      color: $fourth;
+    }
+    &:after {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      bottom: -2px;
+      right: -2px;
+      background: $gradient;
+      content: '';
+      z-index: -1;
+      border-radius: 4px;
+    }
+  }
+
+  &.secondary-button {
+    background: $third;
+    background-clip: padding-box;
+    transition: background 0.6s ease;
+    &:hover {
+      background: $gradient;
+      background-clip: padding-box;
+      color: $third;
+      box-shadow: $box-shadow;
+    }
+    &:after {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      bottom: -2px;
+      right: -2px;
+      background: $gradient;
+      content: '';
+      z-index: -1;
+      border-radius: 4px;
+    }
+  }
 }
