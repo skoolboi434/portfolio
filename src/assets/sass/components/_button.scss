@@ -1,0 +1,67 @@
+button:focus,
+button:active,
+button:hover,
+.btn.active,
+.btn.active {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.button {
+  padding: 0.8rem 2.2rem;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 4px;
+
+  &.button-primary {
+    background: $gradient;
+    background-clip: padding-box;
+    color: $third;
+    box-shadow: $box-shadow;
+    transition-duration: 0.4s;
+    &:hover {
+      background: $third;
+      background-clip: padding-box;
+      color: $fourth;
+    }
+    &:after {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      bottom: -2px;
+      right: -2px;
+      background: $gradient;
+      content: '';
+      z-index: -1;
+      border-radius: 4px;
+    }
+  }
+
+  &.button-secondary {
+    background: $gradient;
+    background-clip: padding-box;
+    color: $third;
+    box-shadow: $box-shadow;
+    transition-duration: 0.4s;
+    &:hover {
+      background: $third;
+      background-clip: padding-box;
+      color: $fourth;
+    }
+    &:after {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      bottom: -2px;
+      right: -2px;
+      background: $gradient;
+      content: '';
+      z-index: -1;
+      border-radius: 4px;
+    }
+  }
+}

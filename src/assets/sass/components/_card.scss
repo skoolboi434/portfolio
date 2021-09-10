@@ -1,0 +1,45 @@
+.custom-card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  box-shadow: $shadow;
+  .card-picture {
+    .picture-1 {
+      background-image: url('https://thetravisdavis.com/storage/cover_images/healthgram-feat_1608243018.png');
+      background-size: cover;
+      height: 23rem;
+      background-blend-mode: screen;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
+    img {
+      min-height: 185px;
+    }
+  }
+
+  .card-heading {
+    font-size: 28px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: absolute;
+    top: 9rem;
+    right: 2rem;
+    text-align: right;
+    width: 82%;
+
+    .heading-span {
+      background-image: linear-gradient(to right bottom, rgba($primary, 0.85), rgba($secondary, 0.85));
+      padding: 1rem 1.5rem;
+
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+  }
+  .card-details {
+    padding: 5rem 2rem;
+  }
+}

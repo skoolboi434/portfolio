@@ -16,7 +16,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: $main-font;
 }
 
 h1 {
@@ -27,6 +27,12 @@ h1 {
   }
 
   margin: 1rem 0;
+
+  &.title-text {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 72px;
+  }
 }
 
 h2 {
@@ -39,11 +45,18 @@ h2 {
 
 p {
   text-transform: none;
+
+  &.para {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 
 a {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
+  cursor: pointer;
 
   &:hover {
     text-decoration: none;
@@ -58,26 +71,6 @@ a {
 
 .btn-danger {
   background-color: #ba0a0f !important;
-}
-
-button:focus,
-button:active,
-button:hover,
-.btn.active,
-.btn.active {
-  outline: none;
-  box-shadow: none !important;
-}
-
-.button {
-  padding: 0.8rem 2.2rem;
-  font-family: $main-font;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  position: relative;
-  border: 3px solid transparent;
-  border-radius: 4px;
 }
 
 .button {
