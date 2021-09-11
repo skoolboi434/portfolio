@@ -1,0 +1,22 @@
+.footer {
+  text-align: center;
+
+  @include large-screen {
+    text-align: left;
+  }
+  .footer-social {
+    display: flex;
+    justify-content: center;
+
+    @include large-screen {
+      justify-content: flex-end;
+    }
+
+    .social-link {
+      font-size: 30px;
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

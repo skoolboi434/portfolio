@@ -3,7 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 const Navigation = () => {
   return (
-    <Navbar className='navbar-custom navbar-light navbar-expand-md'>
+    <Navbar expand='lg' className='navbar-custom navbar-light navbar-expand-md'>
       <Navbar.Brand href='/'>thetravisdavis</Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Navbar.Collapse id='basic-navbar-nav'>
@@ -12,7 +12,7 @@ const Navigation = () => {
             <Nav.Link href='/'>Home</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href='/portfolio'>Portfolio</Nav.Link>
+            <Nav.Link href='/#portfolio'>Portfolio</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href='/resume'>Resume</Nav.Link>

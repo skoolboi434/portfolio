@@ -4,7 +4,7 @@ import { PrimaryButton } from '../../Elements/Button/Button.style';
 
 const ProjectCard = ({ className, buttonURL, buttonText, title, type, imageURL }) => {
   return (
-    <Col md={6} lg={4}>
+    <Col md={6} lg={4} className='card-container'>
       <div className='custom-card'>
         <div className='card-picture'>
           <Image src={imageURL} fluid />

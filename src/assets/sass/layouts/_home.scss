@@ -1,13 +1,22 @@
 /* About section */
 
 .about-section {
-  padding: 80px 0;
+  padding: 80px 20px;
+
+  @include large-screen {
+    padding: 80px 0;
+  }
 
   .about-title {
     span {
       display: block;
       font: normal bold 49px/60px 'Open Sans';
       letter-spacing: 21px;
+    }
+
+    @include small-screen {
+      font-size: 31px;
+      letter-spacing: 10px;
     }
   }
 }
@@ -39,4 +48,11 @@
 
 .portfolio-section {
   padding: 80px 0;
+
+  .card-container {
+    margin-bottom: 30px;
+    @include large-screen {
+      margin-bottom: 0;
+    }
+  }
 }

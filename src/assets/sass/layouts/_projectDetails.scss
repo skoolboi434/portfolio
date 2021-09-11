@@ -1,0 +1,18 @@
+.custom-iwt {
+  margin-top: 30px;
+
+  .row {
+    @include large-screen {
+      display: flex;
+      /* flex-direction: row-reverse; */
+    }
+
+    .iwt-text {
+      padding-top: 30px;
+
+      @include large-screen {
+        padding-top: 0;
+      }
+    }
+  }
+}

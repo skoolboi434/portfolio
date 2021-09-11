@@ -67,7 +67,8 @@ const Home = ({ className }) => {
         </Row>
       </Wrapper>
 
-      <Wrapper className='mb-5'>
+      <Wrapper className='portfolio-section mb-5'>
+        <a id='portfolio'></a>
         <Row className='mb-4'>
           <Col lg={12} className='text-center'>
             <h1 className='title-text text-uppercase'>Featured Projects</h1>

@@ -1,8 +1,12 @@
 .navbar-custom {
-  padding: 1rem 20rem;
+  @include large-screen {
+    padding: 1rem 20rem;
+  }
   .navbar-brand {
-    padding: 0 2rem 0 5rem;
     font-family: $main-font;
+    @include large-screen {
+      padding: 0 2rem 0 5rem;
+    }
   }
   .nav-item {
     .nav-link {

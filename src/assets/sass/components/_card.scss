@@ -26,10 +26,15 @@
     text-transform: uppercase;
     color: #ffffff;
     position: absolute;
-    top: 9rem;
+    top: 13rem;
     right: 2rem;
     text-align: right;
-    width: 82%;
+    width: 87%;
+
+    @include large-screen {
+      top: 9rem;
+      width: 82%;
+    }
 
     .heading-span {
       background-image: linear-gradient(to right bottom, rgba($primary, 0.85), rgba($secondary, 0.85));
