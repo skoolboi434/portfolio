@@ -3,12 +3,12 @@ import { Row, Col, Image } from 'react-bootstrap';
 import { PrimaryButton } from '../../Elements/Button/Button.style';
 import Healthgram from '../../../assets/img/feature-healthgram.png';
 
-const IWTBlock = ({ className, buttonURL, buttonText, children, text }) => {
+const IWTBlock = ({ className, buttonURL, buttonText, children, text, sideImage }) => {
   return (
     <div className='custom-iwt'>
       <Row className={className}>
         <Col md={6} lg={6} className='image'>
-          <Image src={Healthgram} fluid />
+          <Image src={sideImage} fluid />
         </Col>
         <Col md={6} lg={6} className='text'>
           {children}

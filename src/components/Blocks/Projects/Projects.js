@@ -16,7 +16,7 @@ const Projects = () => {
   return (
     <Row>
       {data.map(post => {
-        return <CustomCard key={post.id} title={post.title} type={post.type} imageURL={post.mainImage} buttonText='View Project' buttonURL={`/projects/:${post.id}`} />;
+        return <CustomCard key={post.id} title={post.title} type={post.type} imageURL={post.mainImage} buttonText='View Project' buttonURL={`/projects/${post.id}`} />;
       })}
     </Row>
   );

@@ -7,19 +7,25 @@ import { CustomIWTBlock } from '../../Blocks/IWT/IWTBlock.style';
 import projects from '../../../data/ProjectData';
 
 const ProjectDetails = ({ match }) => {
+  console.log(projects);
+
+  const project = projects.find(p => p.id === match.params.id);
+
+  console.log(project);
+
   return (
     <Wrapper>
       <PrimaryButton buttonURL='/#portfolio' buttonText='Back To Portfolio' />
       <div className='project-details'>
-        <h1 className='project-title pt-3'>Project Title</h1>
+        <h1 className='project-title pt-3'>{project.title}</h1>
         <p className='project-type'>
-          <small>Project Type: </small>
+          <small>Project Type: {project.type}</small>
         </p>
         <div className='feature-image mb-5'>
-          <Image src={Superior} fluid />
+          <Image src={`.${project.mainImage}`} fluid />
         </div>
       </div>
-      <CustomIWTBlock reverse text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' buttonText='View Website' />
+      <CustomIWTBlock reverse text={project.body} sideImage={`.${project.secondaryImage}`} buttonText='View Website' buttonURL={project.url} />
     </Wrapper>
   );
 };
