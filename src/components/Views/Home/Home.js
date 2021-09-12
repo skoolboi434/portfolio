@@ -7,11 +7,8 @@ import { faCode, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { CustomHero } from '../../Blocks/Hero/Hero.style';
 import { PrimaryButton } from '../../Elements/Button/Button.style';
 import Wrapper from '../../Elements/Wrapper/Wrapper';
-import CustomCard from '../../Blocks/Card/ProjectCard';
 
-import Healthgram from '../../../assets/img/feature-healthgram.png';
-import Chud from '../../../assets/img/feature-chud.png';
-import Superior from '../../../assets/img/feature-superior.png';
+import Projects from '../../Blocks/Projects/Projects';
 
 const Home = ({ className }) => {
   return (
@@ -74,13 +71,7 @@ const Home = ({ className }) => {
             <h1 className='title-text text-uppercase'>Featured Projects</h1>
           </Col>
         </Row>
-        <Row>
-          <CustomCard title='Healthgram' imageURL={Healthgram} type='Wordpress Development' buttonText='Project Details' />
-
-          <CustomCard title='Superior Services' imageURL={Superior} type='Wordpress Development' buttonText='Project Details' />
-
-          <CustomCard title='Chud Air Conditioning' imageURL={Chud} type='Wordpress Development' buttonText='Project Details' />
-        </Row>
+        <Projects />
       </Wrapper>
     </React.Fragment>
   );

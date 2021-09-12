@@ -13,10 +13,10 @@ const Footer = () => {
         </Col>
         <Col lg={6}>
           <div className='footer-social'>
-            <a href='https://github.com/skoolboi434' class='social-link' target='_blank'>
+            <a href='https://github.com/skoolboi434' className='social-link' target='_blank' rel='noopener noreferrer'>
               <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a href='https://www.linkedin.com/in/travis-davis-17ba88b9/' class='social-link' target='_blank'>
+            <a href='https://www.linkedin.com/in/travis-davis-17ba88b9/' className='social-link' target='_blank' rel='noopener noreferrer'>
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>

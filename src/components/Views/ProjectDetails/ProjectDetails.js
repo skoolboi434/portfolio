@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Wrapper from '../../Elements/Wrapper/Wrapper';
 import { PrimaryButton } from '../../Elements/Button/Button.style';
 import { Image } from 'react-bootstrap';
 import Superior from '../../../assets/img/feature-superior.png';
 import { CustomIWTBlock } from '../../Blocks/IWT/IWTBlock.style';
+import projects from '../../../data/ProjectData';
 
-const ProjectDetails = () => {
+const ProjectDetails = ({ match }) => {
   return (
     <Wrapper>
       <PrimaryButton buttonURL='/#portfolio' buttonText='Back To Portfolio' />
