@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row, Col, Image } from 'react-bootstrap';
 import { PrimaryButton } from '../../Elements/Button/Button.style';
-import Healthgram from '../../../assets/img/feature-healthgram.png';
 
 const IWTBlock = ({ className, buttonURL, buttonText, children, text, sideImage }) => {
   return (
@@ -13,7 +12,7 @@ const IWTBlock = ({ className, buttonURL, buttonText, children, text, sideImage 
         <Col md={6} lg={6} className='text'>
           {children}
           <p className='iwt-text pb-3'>{text}</p>
-          <PrimaryButton className={className} buttonText={buttonText} buttonURL={buttonURL} />
+          <PrimaryButton className={className} buttonText={buttonText} buttonURL={buttonURL} target='_blank' />
         </Col>
       </Row>
     </div>

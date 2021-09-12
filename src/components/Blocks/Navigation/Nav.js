@@ -3,28 +3,39 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 const Navigation = () => {
   return (
-    <Navbar expand='lg' className='navbar-custom navbar-light navbar-expand-md'>
-      <Navbar.Brand href='/'>thetravisdavis</Navbar.Brand>
-      <Navbar.Toggle aria-controls='basic-navbar-nav' />
-      <Navbar.Collapse id='basic-navbar-nav'>
-        <Nav className='ml-auto'>
-          <Nav.Item>
-            <Nav.Link href='/'>Home</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href='/#portfolio'>Portfolio</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href='/resume'>Resume</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href='https://www.linkedin.com/in/travis-davis-17ba88b9/' target='_blank'>
-              Contact
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <div className='navigation'>
+      <input className='navigation-checkbox' type='checkbox' name='' id='navi-toggle' />
+      <label htmlFor='navi-toggle' className='navigation-button'>
+        <span className='navigation-icon'>&nbsp;</span>
+      </label>
+
+      <div className='navigation-background'>&nbsp;</div>
+
+      <nav className='navigation-nav'>
+        <ul className='navigation-list'>
+          <li className='navigation-item'>
+            <a href='#' className='navigation-link'>
+              Home
+            </a>
+          </li>
+          <li className='navigation-item'>
+            <a href='/#porfolio' className='navigation-link'>
+              Portfolio
+            </a>
+          </li>
+          <li className='navigation-item'>
+            <a href='https://github.com/skoolboi434' className='navigation-link' target='_blank'>
+              Github
+            </a>
+          </li>
+          <li className='navigation-item'>
+            <a href='https://www.linkedin.com/in/travis-davis-17ba88b9/' className='navigation-link' target='_blank'>
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 

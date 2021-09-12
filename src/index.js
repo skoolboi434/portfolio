@@ -6,9 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/sass/main.scss';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <App />
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 

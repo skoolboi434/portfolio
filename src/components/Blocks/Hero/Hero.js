@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Row, Col, Image } from 'react-bootstrap';
 import Logo from '../../../assets/img/vector-logo.png';
 import { PrimaryButton } from '../../Elements/Button/Button.style';
 import { CustomWrapper } from '../../Elements/Wrapper/Wrapper.style';

@@ -22,3 +22,166 @@
     }
   }
 }
+
+.navigation {
+  .navigation-checkbox {
+    display: none;
+    &:checked ~ .navigation-background {
+      transform: scale(80);
+    }
+
+    &:checked ~ .navigation-nav {
+      opacity: 1;
+      width: 100%;
+    }
+
+    &:checked + .navigation-button .navigation-icon {
+      background-color: transparent;
+    }
+
+    &:checked + .navigation-button .navigation-icon:before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+
+    &:checked + .navigation-button .navigation-icon:after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+
+  /* Navigation Toggle Styles */
+
+  .navigation-button {
+    background-color: $third;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba($fourth, 0.4);
+    text-align: center;
+    cursor: pointer;
+
+    /* @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    } */
+
+    &:hover {
+      .navigation-icon:before {
+        top: -1rem;
+      }
+      .navigation-icon:after {
+        top: 1rem;
+      }
+    }
+
+    .navigation-icon {
+      position: relative;
+      margin-top: 3.5rem;
+      &,
+      &:before,
+      &:after {
+        width: 3rem;
+        height: 2px;
+        background-color: #333;
+        display: inline-block;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+      }
+
+      &:before {
+        top: -0.8rem;
+      }
+
+      &:after {
+        top: 0.8rem;
+      }
+    }
+  }
+
+  .navigation-background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 45px;
+    right: 45px;
+    background-image: radial-gradient($primary, $secondary);
+    z-index: 999;
+    transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+
+    /* @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    } */
+  }
+
+  /* Navigation Link Styles */
+
+  .navigation-nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    .navigation-list {
+      list-style: none;
+      width: 100%;
+      @include abCenter;
+      text-align: center;
+      .navigation-item {
+        margin: 1rem;
+        .navigation-link {
+          &:link,
+          &:visited {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            color: $third;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $third 50%);
+            background-size: 220%;
+            transition: all 0.3s;
+          }
+          &:hover,
+          &:active {
+            background-position: 100%;
+            color: $primary;
+            transform: translateX(1rem);
+          }
+          span {
+            margin-right: 1.5rem;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
